@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from pymongo import MongoClient
+import pymongo
 import urllib.parse
 import datetime
 ###############################################################################
@@ -23,7 +24,7 @@ def write_user_stock_fountion(stock, bs, price):
                     "data": 'care_stock',
                     "bs": bs,
                     "price": float(price),
-                    "date_info": datetime.datetime.utcnow()
+                    "date_info": datetime.datetime.now()
                     })
     
 #----------------------------殺掉使用者的股票--------------------------
